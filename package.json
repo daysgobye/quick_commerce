@@ -1,0 +1,27 @@
+{
+  "name": "quick_commerce",
+  "scripts": {
+    "bun:migrate": "bun run migration-runners/bun.ts",
+    "worker:migrate": "bun run migration-runners/worker.ts",
+    "bun:dev": "bun run --hot src/index.tsx",
+    "worker:dev": "wrangler dev src/index.tsx",
+    "worker:deploy": "wrangler deploy --minify src/index.tsx",
+    "studio": "bunx drizzle-kit studio --port 3001 --verbose",
+    "gen:migrations": "bun run drizzle-kit generate"
+  },
+  "dependencies": {
+    "@lucia-auth/oauth": "^3.5.3",
+    "drizzle-orm": "^0.31.2",
+    "hono": "^4.4.8",
+    "lucia": "^3.2.0",
+    "lucia-auth": "^1.8.0",
+    "std-env": "^3.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "@types/bun": "latest",
+    "better-sqlite3": "^11.0.0",
+    "drizzle-kit": "^0.22.7",
+    "wrangler": "^3.57.2"
+  }
+}
