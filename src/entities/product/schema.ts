@@ -21,3 +21,5 @@ export const product = sqliteTable("product", {
 export const productRelations = relations(product, ({ many }) => ({
     variant: many(variant),
 }));
+
+export type Product = typeof product;

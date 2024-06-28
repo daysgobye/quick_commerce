@@ -10,11 +10,8 @@
     "gen:migrations": "bun run drizzle-kit generate"
   },
   "dependencies": {
-    "@lucia-auth/oauth": "^3.5.3",
     "drizzle-orm": "^0.31.2",
     "hono": "^4.4.8",
-    "lucia": "^3.2.0",
-    "lucia-auth": "^1.8.0",
     "std-env": "^3.7.0"
   },
   "devDependencies": {
